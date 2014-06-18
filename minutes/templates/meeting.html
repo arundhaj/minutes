@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form id="momForm" action="/{% if meeting_slug %}{{ meeting_slug}}/{% endif %}" method="post" class="form-horizontal">
+	{% csrf_token %}
+
+	<div class="mmeta mrow">
+		<div class="minutes_meta">
+			<div class="row-fluid">
+				<div class="input-prepend">
+					<span class="add-on"><b>Title</b></span>
+					{{ meeting_form.title }}
+				</div>&nbsp;
+				<div class="input-prepend input-append date form_datetime">
+					<span class="add-on"><b>Date</b></span>
+					{{ meeting_form.occurred }}
+					<span class="add-on"><i class="icon-th"></i></span>
+				</div>
+			</div>
+			<div class="row-fluid noprint" style="margin-top: 5px;">
+				<a href="#" class="btn" id="momFormSubmitButton">
+					<i class="icon-hdd"></i>&nbsp;&nbsp;{{save_btn}}
+				</a>&nbsp;
+				{% if delete_btn == 'true' %}
+				<a href="#" class="btn" id="momFormDeleteButton">
+					<i class="icon-trash"></i>&nbsp;&nbsp;Delete
+				</a>&nbsp;
+				{% endif %}
+				<a href="#" class="btn" id="momFormNewButton">
+					<i class="icon-plus"></i>&nbsp;&nbsp;New
+				</a>&nbsp;
+				<a href="#" class="btn" id="momFormPrintButton">
+					<i class="icon-print"></i>&nbsp;&nbsp;Print
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="mcontent mrow">
+		<div class="row-fluid mygrid" style="height: 100%;">
+			<div class="span4 well" style="height: 100%;">
+				<p class="text-center heads theme">Items Discussed<span class="pull-right noprint"><small>parsed with <a href="#markdownhelp" role="button" class="" data-toggle="modal">Markdown</a></small></span></p>
+				{{ meeting_form.items_discussed }}
+				<div class="input-preview" id="items_discussed_preview"><p class="text-center dblclick muted">Double click to start editing.</p></div>
+			</div>
+			<div class="span4 well" style="height: 100%;">
+				<p class="text-center heads theme">Decisions Made<span class="pull-right noprint"><small>parsed with <a href="#markdownhelp" role="button" class="" data-toggle="modal">Markdown</a></small></span></p>
+				{{ meeting_form.decisions_made }}
+				<div class="input-preview" id="decisions_made_preview"><p class="text-center dblclick muted">Double click to start editing.</p></div>
+			</div>
+			<div class="span4 well" style="height: 100%;">
+				<p class="text-center heads theme">Action Items<span class="pull-right noprint"><small>parsed with <a href="#markdownhelp" role="button" class="" data-toggle="modal">Markdown</a></small></span></p>
+				{{ meeting_form.action_items }}
+				<div class="input-preview" id="action_items_preview"><p class="text-center dblclick muted">Double click to start editing.</p></div>
+			</div>
+		</div>
+	</div>
+</form>
+{% endblock %}

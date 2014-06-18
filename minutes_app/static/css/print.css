@@ -1,0 +1,12 @@
+.mrow, .mcol, .input-content, .input-preview {
+	overflow: visible;
+	height: auto;
+}
+
+.well {
+	border-bottom: 0px;
+}
+
+.noprint {
+	display: none;	
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/normalize.css">
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css">
+		<link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css">
+		<link rel="stylesheet" href="{{ STATIC_URL }}css/datetimepicker.css">
+		<link rel="stylesheet" href="{{ STATIC_URL }}css/minutes.css">
+		<link rel="stylesheet" href="{{ STATIC_URL }}css/print.css" type="text/css" media="print">
+        <script src="{{ STATIC_URL }}js/modernizr-2.6.2.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Arbutus+Slab' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+        <div class="mbody mrow scroll-x scroll-y">
+            <div class="mheader mrow appheadbg theme">
+                <h2 class="apphead">Minutes of Meeting <small>for Inidividuals</small></h2>
+            </div>
+            
+            {% block content %}
+            {% endblock %}
+        </div>
+<div id="markdownhelp" class="modal hide fade" style="display: none;">
+	<div class="modal-header">
+		<a href="#" class="close" data-dismiss="modal">&times;</a>
+		<span style="font-size: 20px; font-weight: bold;">Markdown quick help</span>&nbsp;
+		<span id="pdslheadername" style="font-size: 16px" ></span>
+	</div>
+<div class="modal-body">
+  <div class="mod">
+    <div class="col">
+      <h3>Format Text</h3>
+      <p>Headers</p>
+      <pre># This is an &lt;h1&gt; tag 
+## This is an &lt;h2&gt; tag
+###### This is an &lt;h6&gt; tag</pre>
+     <p>Text styles</p>
+     <pre>*This text will be italic*
+_This will also be italic_
+**This text will be bold**
+__This will also be bold__
+
+*You **can** combine them*
+</pre>
+    </div>
+    <div class="col">
+      <h3>Lists</h3>
+      <p>Unordered</p>
+      <pre>* Item 1
+* Item 2
+  * Item 2a
+  * Item 2b</pre>
+     <p>Ordered</p>
+     <pre>1. Item 1
+2. Item 2
+3. Item 3
+   * Item 3a
+   * Item 3b</pre>
+    </div>
+    <div class="col">
+      <h3>Miscellaneous</h3>
+      <p>Horizontal line</p>
+      <pre>&nbsp;
+---</pre>
+      <p>Images</p>
+      <pre>![GitHub Logo](/images/logo.png)
+Format: ![Alt Text](url)
+</pre>
+     <p>Links</p>
+     <pre>http://github.com - automatic!
+[GitHub](http://github.com)</pre>
+<p>Blockquotes</p>
+     <pre>As Kanye West said:
+
+&gt; We're living the future so
+&gt; the present is our past.
+</pre>
+<p>Source code</p>
+     <pre>```
+# include &lt;stdio.h&gt;
+int main() {
+	return 0;
+}
+```
+</pre>
+</div>
+
+</div>
+</div>
+</div>
+
+        <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/jquery-1.9.0.min.js"><\/script>')</script>
+        <script src="{{ STATIC_URL }}js/plugins.js"></script>
+        <script src="{{ STATIC_URL }}js/bootstrap-datetimepicker.js"></script>
+        <script src="{{ STATIC_URL }}js/bootstrap.js"></script>
+        <script src="{{ STATIC_URL }}js/marked.js"></script>
+        <script src="{{ STATIC_URL }}js/main.js"></script>
+	</body>
+</html>

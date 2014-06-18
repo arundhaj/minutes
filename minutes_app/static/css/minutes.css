@@ -1,0 +1,116 @@
+/* Generic pane rules */
+body { 
+    margin: 0; 
+}
+
+.theme {
+    background: #0F3B68;
+}
+
+.mrow, .mcol { overflow: hidden; position: absolute; }
+.mrow { left: 0; right: 0; }
+.mcol { top: 0; bottom: 0; }
+.scroll-x { overflow-x: auto; }
+.scroll-y { overflow-y: auto; }
+.mbody.mrow { min-width:960px; min-height:600px; top: 0px; bottom: 5px; }
+.mheader.mrow { height: 50px; top: 0; }
+.mmeta.mrow { 
+    height: 75px; 
+    top: 55px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.mcontent.mrow { 
+    top: 130px; 
+    bottom: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.mygrid [class*="span4"] {
+    margin-left: 0.25%;
+    width: 33.16%;
+    padding: 10px;
+}
+
+.mfooter.mrow { height: 50px; bottom: 0; }
+
+.appheadbg {
+    color:white;
+    font-size:1.1em;
+    vertical-align: middle;
+}
+
+.apphead {
+    color: white;
+    vertical-align: middle;
+    padding-left: 8px;
+    margin: 0;
+    line-height: 50px; 
+}
+
+.heads {
+    color:white;
+    padding: 8px;
+    font-size:1.1em;    
+}
+
+.input-content {
+    height: 93%;
+    width: 100%;
+    background-color: white;
+    border-collapse: separate; 
+    border: 1px solid rgb(204, 204, 204); 
+    padding: 4px; 
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */    
+    border-top-right-radius: 3px; border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px; border-top-left-radius: 3px;
+    overflow: scroll;
+    outline: none;
+    margin-bottom: 10px;
+    resize: none;
+}
+
+.input-preview {
+    position: relative;
+    display: block;
+    height: 93%;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */    
+    resize: none;
+    overflow: scroll;
+    background-color: white;
+    border: 1px solid #CCC;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    margin-left: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 4px 6px;
+    margin-bottom: 9px;
+    font-size: 14px;
+    line-height: 20px;
+    border-style: dashed;
+}
+
+.dblclick {
+	font-size:1.2em;
+}
+
+.well {
+-webkit-border-radius: 0px;
+     -moz-border-radius: 0px;
+          border-radius: 0px;   
+}
+
+.minutes_meta input[stat="error"] {
+ 	border-color: rgba(255, 0, 0, 0.8);
+	box-shadow: 0 1px 1px rgba(255, 0, 0, 0.075) inset, 0 0 8px rgba(255, 0, 0, 0.6);
+	outline: 0 none;	
+}
