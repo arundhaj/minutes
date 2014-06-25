@@ -3,6 +3,8 @@
 *.pot
 *.pyc
 local_settings.py
+settings_development.py
+settings_production.py
 
 *.py[cod]
 
@@ -35,5 +37,6 @@ nosetests.xml
 
 # Mr Developer
 # Eclipse pydev
+.project
 .mr.developer.cfg
 .pydevproject

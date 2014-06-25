@@ -1,4 +1,5 @@
-import random, string
+import random
+import string
 
 from autoslug.fields import AutoSlugField
 from django.db import models

@@ -27,9 +27,14 @@ body {
     margin-right: 5px;
 }
 
+.mygrid {
+	height: 100%;
+}
+
 .mygrid [class*="span4"] {
     margin-left: 0.25%;
     width: 33.16%;
+    height: 100%;
     padding: 10px;
 }
 
