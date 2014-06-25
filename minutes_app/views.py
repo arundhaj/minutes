@@ -1,14 +1,14 @@
 # Create your views here.
-from django.core.mail import EmailMultiAlternatives
-from django.shortcuts import render, redirect
-from django.template.loader import render_to_string
-from django.utils.html import strip_tags
+from django.shortcuts import render
+from django.shortcuts import redirect
+from django.views.decorators.http import require_http_methods
 
 from forms import MeetingForm
 from models import Meeting
 
 
 # main function that handles all requests.
+@require_http_methods(["GET", "POST"])
 def meeting(request, meeting_slug=''):
     if request.method == 'POST':
     
